@@ -16,7 +16,7 @@ const mutations = {
 		state.activeNote.text = text;
 	},
 	DELETE_NOTE(state){
-		state.notes.$remove(state.activeNote);
+		state.notes.splice(state.notes.indexOf(state.activeNote),1);
 	},
 	TOGGLE_FAVORITE(state){
 		state.activeNote.favorite = !state.activeNote.favorite;
